@@ -168,7 +168,7 @@ form.addEventListener('submit', calculateRatio);</code></pre>
   <div class="card-header" id="headingSeven">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-        Étape 7 - Récupérer les valeurs du formulaire
+        Étape 7 - Accéder au formulaire HTML dans le JS
       </button>
     </h2>
   </div>
@@ -209,11 +209,49 @@ form.addEventListener('submit', calculateRatio);</code></pre>
 
     </div>
   </div>
-</div>
+</div> <!-- end step 7 -->
 
-</div>
+<div class="card">
+  <div class="card-header" id="headingEight">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+        Étape 8 - Récupérer les valeurs du formulaire
+      </button>
+    </h2>
+  </div>
+  <div id="collapseEight" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Comme on a vu à l'étape précédente, quand on clique sur l'élément <code class="language-js">form</code> dans la console, on a accès à ses sous-éléments, dont les éléments input. Chaque <code class="language-js">input</code> a un index, un peu comme dans un tableau (<em>array</em> en anglais). On accède à un élément d'un tableau en utilisant les accolades<code class="language-js">[]</code>: <code class="language-js">form[0]</code>.</p>
+      <p>Rappel! Les indexes commencent à 0 et non pas 1.</p>
+      <p>Dans la console de ton navigateur, essaie de trouver comment accéder à la valeur (<em>value</em>, hint hint) du premier <code class="language-js">input</code>.</p>
 
-</div>
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3" role="button" aria-expanded="false" aria-controls="collapseAnswer3">Réponse</a>
+      </p>
+      <div class="collapse" id="collapseAnswer3">
+        <div class="card card-body">
+          <p><code class="language-js">form[0].value</code></p>
+          <img src="assets/step8.gif" alt="">
+        </div>
+      </div>
+
+      <p>Tu peux maintenant utiliser ce code dans ta fonction <code class="language-js">calculateRatio()</code> et sauvegarder le nombre de rouleaux dans une belle variable! Vérifie que ta variable marche avec un petit... <code class="language-js">console.log()</code>!</p>
+
+      <p><pre class="language-js line-numbers"><code>function calculateRatio() {
+  const rolls = XXXXX ;
+  console.log(rolls);
+  event.preventDefault();
+}
+
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre></p>
+      <img src="assets/step8.png" alt="">
+    </div>
+  </div>
+</div> <!-- end step 8 -->
+
+</div> <!-- end accordion -->
+</div> <!-- end container -->
 
 
 <script src="javascript/prism.js"></script>
