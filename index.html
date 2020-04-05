@@ -1,0 +1,176 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Toilet Paper Challenge!</title>
+  <link rel="stylesheet" href="stylesheets/prism.css" data-noprefix />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+ <div class="container">
+  <h1>Toilet Paper Rush Challenge!</h1>
+
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Étape 1</button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>Crée un nouveau dossier pour ton projet avec les trois fichiers habituels:</p>
+          <ul>
+            <li>index.html</li>
+            <li>style.css</li>
+            <li>app.js</li>
+          </ul>
+          <p>Ouvre ton dossier dans ton éditeur de texte (Sublime Text, par exemple).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Étape 2 - HTML de base
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>Crée l'HTML de base de ta page web. On va commencer avec un formulaire qui contient deux entrées: les rouleaux restants et le nombre de jours de confinement.</p>
+          <p>Le résultat final devrait avoir l'air de ceci:</p>
+          <img src="" alt="">
+          <p>Et ton code HTML devrait avoir l'air de ceci:</p>
+            <pre class="language-html line-numbers"><code><!-- <form id="form">
+  <label for="nb-rolls">Rouleaux restants:</label>
+  <input type="text" name="nb-rolls" id="nb-rolls">
+
+  <label for="nb-days">Jours de confinements:</label>
+  <input type="text" name="nb-days" id="nb-days">
+
+  <input type="submit" value="Calculons!">
+</form> --></code></pre>
+
+</div>
+</div>
+</div>
+
+<div class="card">
+  <div class="card-header" id="headingThree">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Étape 3 - Relie HTML et JS
+      </button>
+    </h2>
+  </div>
+  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+    <div class="card-body">
+      <pre class="language-html line-numbers"><code><!--
+    <input type="submit" value="Calculons!">
+  </form>
+  <script src="app.js"></script>
+</body>
+--></code></pre>
+</div>
+</div>
+</div>
+<div class="card">
+  <div class="card-header" id="headingFour">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Étape 4 - Code le JavaScript!
+      </button>
+    </h2>
+  </div>
+  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Lorsque les utilisateurs appuient sur le bouton "Calculons", cela doit déclencher un <em>événement</em>: le calcul du ratio.</p>
+      <p>Comment créer un événement en Javascript? Avec la fonction <code class="language-js">addEventListener(EVENT, CALLBACK);</code> qui prend deux arguments, EVENT et CALLBACK.</p>
+      <p>Cette fonction s'appelle sur un élément HTML qu'il faut d'abord obtenir (<code class="language-js">get</code>) et sauvegarder dans une variable:</p>
+      <pre class="language-js line-numbers"><code>const form = document.getElementById('form');
+        form.addEventListener(EVENT, CALLBACK);
+      </code></pre>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" id="headingFive">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        Étape 5 - L'événement de la fonction addEventListener
+      </button>
+    </h2>
+  </div>
+  <div id="collapseFive" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Quel est l'événement déclencheur?</p>
+      <p>Tu trouveras une <a href="https://developer.mozilla.org/en-US/docs/Web/Events">liste ici avec tous les événements.</a> Lequel choisir? "scroll", "click", "mouseover"?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint1" role="button" aria-expanded="false" aria-controls="collapseHint1">Indice</a>
+      </p>
+      <div class="collapse" id="collapseHint1">
+        <div class="card card-body">
+        <p>Regarde dans la section <strong>Form events</strong>, c'est à dire tous les événements reliés aux formulaires.</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer1" role="button" aria-expanded="false" aria-controls="collapseAnswer1">Réponse</a>
+      </p>
+      <div class="collapse" id="collapseAnswer1">
+        <div class="card card-body">
+        <p>Il s'agit de l'événement <code class="language-js">'submit'</code></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" id="headingSix">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        Étape 6 - Callback
+      </button>
+    </h2>
+  </div>
+  <div id="collapseSix" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Le <em>callback</em> d'une fonction c'est généralement... une autre fonction! C'est le code qui va être exécuté lorsque l'événement est déclenché.</p>
+      <pre class="language-js line-numbers"><code>function calculateRatio() {
+  console.log("je suis dans la fonction!!!");
+}
+
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre>
+      <p>Si tu ouvres ta console dans ton navigateur et appuies sur le bouton "Calculons", il ne se passe... rien! On ne voit pas les mots "je suis dans la fonction".</p>
+      <p>C'est un peu bizarre, mais pour régler ce problème, il faut rajouter une ligne dans notre fonction <code class="language-js">calculateRatio()</code>:</p>
+      <pre class="language-js line-numbers"><code>function calculateRatio() {
+  console.log("je suis dans la fonction!!!");
+  event.preventDefault();
+}
+
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+
+
+<script src="javascript/prism.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
