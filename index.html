@@ -68,7 +68,7 @@
   <div class="card-header" id="headingThree">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Étape 3 - Relie HTML et JS
+        Étape 3 - Relie l'HTML et le JS
       </button>
     </h2>
   </div>
@@ -173,7 +173,7 @@ form.addEventListener('submit', calculateRatio);</code></pre>
   <div class="card-header" id="headingSeven">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-        Étape 7 - Accéder au formulaire HTML dans le JS
+        Étape 7 - Accède au formulaire HTML dans le JS
       </button>
     </h2>
   </div>
@@ -220,7 +220,7 @@ form.addEventListener('submit', calculateRatio);</code></pre>
   <div class="card-header" id="headingEight">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-        Étape 8 - Récupérer le nombre de rouleaux dans le formulaire
+        Étape 8 - Récupère le nombre de <i class="fas fa-toilet-paper"></i> dans le formulaire
       </button>
     </h2>
   </div>
@@ -261,22 +261,28 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
   <div class="card-header" id="headingNine">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-        Étape 9 - Récupérer le nombre de jours dans le formulaire
+        Étape 9 - Récupère le nombre de jours dans le formulaire
       </button>
     </h2>
   </div>
   <div id="collapseNine" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
     <div class="card-body">
-      <p>Trouve l'index de l'élément <code class="language-js">input</code> pour le nombre de jours de confinement dans l'élément <code class="language-js">form</code>.
+      <p>Trouve l'index de l'élément <code class="language-js">input</code> pour le nombre de jours de confinement dans l'élément <code class="language-js">form</code>.</p>
 
-      <p>Comme pour les rouleaux, sauvegarde le nombre de jours de confinement  dans une variable  <code class="language-js">const days = XXXX;</code></p>
+      <p>Comme pour les rouleaux, sauvegarde le nombre de jours de confinement  dans une variable  <code class="language-js">const lockdownDays = XXXX;</code></p>
+      <div class="alert alert-warning" role="alert">
+        <i class="far fa-lightbulb"></i>  Note la syntaxe de notre variable <code class="language-js">lockdownDays</code>. En <strong>JavaScript</strong>, quand une variable est faite de plusieurs mots, le premier mot est en minuscules, tandis que la première lettre des mots suivants est en majuscule. Cette syntaxe s'appelle <code class="language-js">lowerCamelCase</code>... car elle rappelle les bosses d'un chameau.   <img src="assets/camel.png" alt="Camel" height="70rem"></p>
+        <p>D'autres syntaxes existent. En <strong>Ruby</strong>, par exemple, on utilise la syntaxe <code class="language-js">snake_case</code>. <img src="assets/snake.webp" alt="Snake" height="50rem"> Notre variable s'écrirait alors <code class="language-js">lockdown_days</code>.
+      </div>
       <p>Vérifie que ta variable stocke la bonne donnée avec... <code class="language-js">console.log()</code>!</p>
 
       <p><pre class="language-js line-numbers"><code>function calculateRatio() {
   const rolls = XXXXX ;
   console.log(rolls);
-  const days = XXXXX ;
-  console.log(days);
+
+  const lockdownDays = XXXXX ;
+  console.log(lockdownDays);
+
   event.preventDefault();
 }
 
@@ -286,6 +292,98 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
     </div>
   </div>
 </div> <!-- end step 9 -->
+
+<div class="card">
+  <div class="card-header" id="headingTen">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+        Étape 10 - Calcule le ratio
+      </button>
+    </h2>
+  </div>
+  <div id="collapseTen" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Toujours dans la fonction <code class="language-js">calculateRatio()</code>, on peut maintenant calculer le fameux ratio.</p>
+      <p>Imaginons qu'un <i class="fas fa-toilet-paper"></i> dure 5 jours. Pour calculer le nombre total de jours pour lesquels on aura du papier, il faut faire: <code class="language-js">rolls * 5</code></p>
+
+      <div class="alert alert-warning" role="alert">
+        <i class="far fa-star"></i>   En JavaScript (et beaucoup d'autres langages), on utilise l'astérisque (<strong>*</strong>) pour représenter la <strong>multiplication</strong>.
+      </div>
+
+
+      <p>Encore une fois, utilisons une variable pour stocker ce nombre total de jours: <code class="language-js">const paperDays = rolls * 5;</code></p>
+
+      <p>Vérifie que ta variable <code class="language-js">paperDays</code> stocke la bonne donnée avec... Ok, ok, tu sais déjà quoi faire!</p>
+
+      <div class="alert alert-warning" role="alert">
+        <i class="far fa-lightbulb"></i>  Une fois que tu as vérifié ce que stocke une variable, tu peux te débarasser du <code class="language-js">console.log()</code> ou le mettre ne commentaire.
+      </div>
+
+      <p>Il ne reste plus qu'à calculer le ratio. Imaginons que j'ai 3 <i class="fas fa-toilet-paper"></i> chez moi. Vu que chaque <i class="fas fa-toilet-paper"></i> dure 5 jours, il me reste du papier pour 15 jours. Si le confinement dure 15 jours, c'est parfait j'ai tout juste assez de papier. Mon ratio est de <strong>100%</strong>.</p>
+      <p>Mais imagine que le confinement dure <strong>30 jours</strong>. Là, je n'ai du papier de toilette que pour la moitié de mon confinement. Mon ratio est de <strong>50%</strong>.</p>
+
+      <p>Quelle est la formule du ratio?</p>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer4" role="button" aria-expanded="false" aria-controls="collapseAnswer4">Réponse</a>
+      </p>
+      <div class="collapse" id="collapseAnswer4">
+        <div class="card card-body">
+        <p>La formule du ratio est la suivante: <code class="language-js">paperDays / lockdownDays * 100</code></p>
+        </div>
+      </div>
+      <p>Tu peux maintenant stocker ton ratio dans une variable et... oui, oui, <code class="language-js">console.log(ratio);</code> for the win!</p>
+
+
+      <p><pre class="language-js line-numbers"><code>function calculateRatio() {
+  const rolls = XXXXX ;
+  const days = XXXXX ;
+
+  const paperDays = rolls * 5;
+  // console.log(paperDays);
+
+  const ratio = XXXXX ;
+  console.log(ratio);
+
+  event.preventDefault();
+}
+
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre></p>
+      <img src="assets/step10.png" alt="">
+      <img src="assets/step10b.png" alt="">
+    </div>
+  </div>
+</div> <!-- end step 10 -->
+
+<div class="card">
+  <div class="card-header" id="headingEleven">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+        Étape 11 - Arrondis le ratio
+      </button>
+    </h2>
+  </div>
+  <div id="collapseEleven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Que se passe-t-il s'il te reste 3 <i class="fas fa-toilet-paper"></i> et que tu es confiné <strong>27</strong> jours? Quel sera ton ratio?</p>
+      <img src="assets/step11.png" alt="" class="mb-5">
+      <p>Pas génial, tous ces chiffres après la virgule! On a besoin d'arrondir notre ratio. Pour ceci, JavaScript a une fonction qui s'appelle... <code class="language-js">round()</code>.</p>
+      <p class="mb-3">En regardant <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">documentation pour la fonction <code class="language-js">round()</code></a>, arrives-tu à arrondir ton ratio?
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer5" role="button" aria-expanded="false" aria-controls="collapseAnswer5">Réponse</a>
+      </p>
+      <div class="collapse" id="collapseAnswer5">
+        <div class="card card-body">
+        <p>Voici comment arrondir le ratio: <code class="language-js">Math.round(paperDays / lockdownDays * 100)</code></p>
+        </div>
+      </div>
+
+      <img src="assets/step11b.png" alt="">
+    </div>
+  </div>
+</div> <!-- end step 10 -->
 
 </div> <!-- end accordion -->
 </div> <!-- end container -->
