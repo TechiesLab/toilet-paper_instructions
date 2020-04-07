@@ -5,6 +5,7 @@
   <title>Toilet Paper Challenge!</title>
   <link rel="stylesheet" href="stylesheets/prism.css" data-noprefix />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 <body>
  <div class="container">
@@ -14,11 +15,11 @@
   <p>Voici la <a href="https://margotte.github.io/toilet-paper/">version du Techies Lab</a>:</p>
   <img src="assets/intro.png" alt="Screenshot of Techies Lab page" class="mb-5">
 
-  <div class="accordion" id="accordionExample">
+  <div class="accordion mb-5" id="accordionExample">
     <div class="card">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Étape 1</button>
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Étape 1 - Dossier et fichiers</button>
         </h2>
       </div>
 
@@ -219,14 +220,16 @@ form.addEventListener('submit', calculateRatio);</code></pre>
   <div class="card-header" id="headingEight">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-        Étape 8 - Récupérer les valeurs du formulaire
+        Étape 8 - Récupérer le nombre de rouleaux dans le formulaire
       </button>
     </h2>
   </div>
   <div id="collapseEight" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
     <div class="card-body">
       <p>Comme on a vu à l'étape précédente, quand on clique sur l'élément <code class="language-js">form</code> dans la console, on a accès à ses sous-éléments, dont les éléments input. Chaque <code class="language-js">input</code> a un index, un peu comme dans un tableau (<em>array</em> en anglais). On accède à un élément d'un tableau en utilisant les accolades<code class="language-js">[]</code>: <code class="language-js">form[0]</code>.</p>
-      <p>Rappel! Les indexes commencent à 0 et non pas 1.</p>
+      <div class="alert alert-warning" role="alert">
+        <i class="fas fa-exclamation-triangle"></i>  En JavaScript (et beaucoup d'autres langages), les index commencent à 0 et non pas 1.
+      </div>
       <p>Dans la console de ton navigateur, essaie de trouver comment accéder à la valeur (<em>value</em>, hint hint) du premier <code class="language-js">input</code>.</p>
 
       <p>
@@ -239,7 +242,7 @@ form.addEventListener('submit', calculateRatio);</code></pre>
         </div>
       </div>
 
-      <p>Tu peux maintenant utiliser ce code dans ta fonction <code class="language-js">calculateRatio()</code> et sauvegarder le nombre de rouleaux dans une belle variable! Vérifie que ta variable marche avec un petit... <code class="language-js">console.log()</code>!</p>
+      <p>Tu peux maintenant utiliser ce code dans ta fonction <code class="language-js">calculateRatio()</code> et sauvegarder le nombre de rouleaux dans une belle variable! Vérifie que ta variable stocke la bonne donnée avec un petit... <code class="language-js">console.log()</code>!</p>
 
       <p><pre class="language-js line-numbers"><code>function calculateRatio() {
   const rolls = XXXXX ;
@@ -253,6 +256,36 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
     </div>
   </div>
 </div> <!-- end step 8 -->
+
+<div class="card">
+  <div class="card-header" id="headingNine">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+        Étape 9 - Récupérer le nombre de jours dans le formulaire
+      </button>
+    </h2>
+  </div>
+  <div id="collapseNine" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Trouve l'index de l'élément <code class="language-js">input</code> pour le nombre de jours de confinement dans l'élément <code class="language-js">form</code>.
+
+      <p>Comme pour les rouleaux, sauvegarde le nombre de jours de confinement  dans une variable  <code class="language-js">const days = XXXX;</code></p>
+      <p>Vérifie que ta variable stocke la bonne donnée avec... <code class="language-js">console.log()</code>!</p>
+
+      <p><pre class="language-js line-numbers"><code>function calculateRatio() {
+  const rolls = XXXXX ;
+  console.log(rolls);
+  const days = XXXXX ;
+  console.log(days);
+  event.preventDefault();
+}
+
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre></p>
+      <img src="assets/step9.png" alt="">
+    </div>
+  </div>
+</div> <!-- end step 9 -->
 
 </div> <!-- end accordion -->
 </div> <!-- end container -->
