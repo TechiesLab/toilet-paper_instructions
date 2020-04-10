@@ -76,7 +76,7 @@
   </div>
   <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
     <div class="card-body">
-      <pre class="language-html line-numbers"><code><!--
+      <pre class="language-html line-numbers"><code><!-- ...
     <input type="submit" value="Calculons!">
   </form>
   <script src="app.js"></script>
@@ -99,8 +99,7 @@
       <p>Comment créer un événement en Javascript? Avec la fonction <code class="language-js">addEventListener(EVENT, CALLBACK);</code> qui prend deux arguments, EVENT et CALLBACK.</p>
       <p>Cette fonction s'appelle sur un élément HTML qu'il faut d'abord obtenir (<code class="language-js">get</code>) et sauvegarder dans une variable:</p>
       <pre class="language-js line-numbers"><code>const form = document.getElementById('form');
-        form.addEventListener(EVENT, CALLBACK);
-      </code></pre>
+form.addEventListener(EVENT, CALLBACK);</code></pre>
     </div>
   </div>
 </div>
@@ -166,7 +165,7 @@ form.addEventListener('submit', calculateRatio);</code></pre>
 const form = document.getElementById('form');
 form.addEventListener('submit', calculateRatio);</code></pre>
 
-<img src="assets/step6.png" alt="">
+<img src="assets/step6.png" alt="" class="mt-5">
     </div>
   </div>
 </div>
@@ -181,10 +180,10 @@ form.addEventListener('submit', calculateRatio);</code></pre>
   </div>
   <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
     <div class="card-body">
-      <p>Maintenant que notre fonction <code class="language-js">calculateRatio()</code> fonctionne (haha), au lieu de faire un console log sur la string <code class="language-js">"je suis dans la fonction"</code>, on va faire un <code class="language-js">console.log()</code> sur notre formulaire.</p>
+      <p>Maintenant que notre fonction <code class="language-js">calculateRatio()</code> fonctionne (haha), au lieu de faire un console log sur la string <code class="language-js">"je suis dans la fonction"</code>, on va faire un <code class="language-js">console.log()</code> sur notre formulaire HTML.</p>
       <p>Pourquoi?</p>
       <p>Parce que dans notre formulaire se cachent les valeurs qu'on cherche pour calculer notre ratio!</p>
-      <p>Dans quelle variable avons-nous stocké l'élément HTML form? Comment pouvons-nous l'inspecter?</p>
+      <p>Dans quelle variable de notre code JS avons-nous stocké l'élément HTML form? Comment pouvons-nous l'inspecter?</p>
             <p>
         <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint2" role="button" aria-expanded="false" aria-controls="collapseHint2">Indice</a>
       </p>
@@ -228,11 +227,11 @@ form.addEventListener('submit', calculateRatio);</code></pre>
   </div>
   <div id="collapseEight" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
     <div class="card-body">
-      <p>Comme on a vu à l'étape précédente, quand on clique sur l'élément <code class="language-js">form</code> dans la console, on a accès à ses sous-éléments, dont les éléments input. Chaque <code class="language-js">input</code> a un index, un peu comme dans un tableau (<em>array</em> en anglais). On accède à un élément d'un tableau en utilisant les accolades<code class="language-js">[]</code>: <code class="language-js">form[0]</code>.</p>
+      <p>Comme on a vu à l'étape précédente, quand on clique sur l'élément <code class="language-js">form</code> dans la console, on a accès à ses sous-éléments, dont les éléments input. Chaque <code class="language-js">input</code> a un index, un peu comme dans un tableau (<em>array</em> en anglais). On accède à un élément d'un tableau en utilisant les accolades <code class="language-js">[]</code>: <code class="language-js">form[0]</code>.</p>
       <div class="alert alert-warning" role="alert">
         <i class="fas fa-exclamation-triangle"></i>  En JavaScript (et beaucoup d'autres langages), les index commencent à 0 et non pas 1.
       </div>
-      <p>Dans la console de ton navigateur, essaie de trouver comment accéder à la valeur (<em>value</em>, hint hint) du premier <code class="language-js">input</code>.</p>
+      <p>Dans la console de ton navigateur, essaie de trouver comment accéder à la valeur (<em>value</em>, hint, hint) du premier <code class="language-js">input</code>.</p>
 
       <p>
         <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3" role="button" aria-expanded="false" aria-controls="collapseAnswer3">Réponse</a>
@@ -254,7 +253,7 @@ form.addEventListener('submit', calculateRatio);</code></pre>
 
 const form = document.getElementById('form');
 form.addEventListener('submit', calculateRatio);</code></pre></p>
-      <img src="assets/step8.png" alt="">
+      <img src="assets/step8.png" alt="" class="mt-5">
     </div>
   </div>
 </div> <!-- end step 8 -->
@@ -290,7 +289,7 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
 
 const form = document.getElementById('form');
 form.addEventListener('submit', calculateRatio);</code></pre></p>
-      <img src="assets/step9.png" alt="">
+      <img src="assets/step9.png" alt="" class="mt-5">
     </div>
   </div>
 </div> <!-- end step 9 -->
@@ -352,8 +351,8 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
 
 const form = document.getElementById('form');
 form.addEventListener('submit', calculateRatio);</code></pre></p>
-      <img src="assets/step10.png" alt="">
-      <img src="assets/step10b.png" alt="">
+      <img src="assets/step10.png" alt="" class="mt-5">
+      <img src="assets/step10b.png" alt="" class="mt-5">
     </div>
   </div>
 </div> <!-- end step 10 -->
