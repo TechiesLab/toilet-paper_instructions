@@ -467,8 +467,8 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
         Étape 13 - Affiche un <strong>beau</strong> ratio
       </button>
     </h2>
-  </div>
-  <div id="collapseThirteen" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+  </div><!-- end card-header -->
+  <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionExample">
     <div class="card-body">
       <p>Notre ratio fait un peu pitié. Il est perdu en-dessous du formulaire, on ne sait pas qu'il représente un pourcentage...</p>
 
@@ -480,8 +480,6 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
       <p>On peut utiliser la fonction <code class="language-js">innerHTML</code> comme ceci:</p>
       <p><code class="language-js">outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "&lt;/h1&gt;";</code></p>
 
-
-
       <p>Pourrait-on simplifier cette ligne de code? La "refactoriser"? Si je pose la question, c'est que la réponse est oui... Essaie!</p>
 
       <p>
@@ -489,17 +487,73 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
       </p>
       <div class="collapse" id="collapseHint3">
         <div class="card card-body">
-          <p><code class="language-js">outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %&lt;/h1&lt;";</code></p>
+          <p><code class="language-js">outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %&lt;/h1&gt;";</code></p>
           <div class="alert alert-warning" role="alert">
             <p><i class="far fa-lightbulb"></i>  On pourrait même aller plus loin en utilisant les <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">"littéraux de gabarits"</a> (<em>template literal</em> en anglais). En gros, il s'agit d'injecter du code Javascript dans une string grâce à cette syntaxe: <code class="language-js">${expression}</code></p>
             <p><code class="language-js">outputDiv.innerHTML = `&lt;h1&gt;${ratio} %&lt;/h1&gt;`;</code></p>
-            <p>Note qu'on utilise alors l'accent grave <strong>``</strong> (<em>backtick</em>) et non les guillements <strong>""</strong>.</p>
+            <p>Note qu'on utilise alors les accents graves <strong>` `</strong> (<em>backticks</em> en anglais) et non les guillements <strong>" "</strong>.</p>
           </div>
         </div>
-      </div>
-
-
+      </div><!-- end collapse hint -->
+    </div><!-- end card-body -->
+  </div><!-- end collapseThirteen -->
 </div> <!-- end step 13 -->
+
+<div class="card">
+  <div class="card-header" id="headingFourteen">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+        Étape 14 - Les émojis 😀 🍎 🏌️‍♀️
+      </button>
+    </h2>
+  </div>
+  <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>À côté de notre ratio, on va ajouter un bel émoji! Celui-ci va dépendre du ratio. Si on est au-dessus de 100%, on est 😄, sinon c'est la... 💩</p>
+
+      <p>Et qui dit <em>si</em>, dit <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">condition</strong></a>! Petit rappel sur la syntaxe d'une condition:</p>
+
+      <p><pre class="language-js line-numbers"><code>if (condition) {
+  // SOME CODE
+} else {
+  // MORE CODE
+}</code></pre></p>
+
+      <p>Notre code aurait donc l'air de quelque chose comme ceci:</p>
+      <p><pre class="language-js line-numbers"><code>if (ratio XXXX 100) {
+  outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "😄" + "&lt;/h1&gt;";
+} else {
+  XXXX
+}</code></pre></p>
+
+      <p>La version refactorisée de ce code?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint4" role="button" aria-expanded="false" aria-controls="collapseHint4">Indice</a>
+      </p>
+      <div class="collapse" id="collapseHint4">
+        <div class="card card-body">
+          <p><pre class="language-js line-numbers"><code>if (ratio XXXX 100) {
+  outputDiv.innerHTML = `&lt;h1&gt;${ratio} % 😄&lt;/h1&gt;`;
+} else {
+  XXXX
+}</code></pre></p>
+
+        </div>
+      </div> <!-- end hint -->
+      <div class="alert alert-warning mt-5" role="alert">
+        <p><i class="far fa-grimace"></i>  Normalement, tu peux trouver les émojis de ton choix sur un site comme <a href="https://emojipedia.org">Emojipedia</a> et simplement les copier-coller dans ton code JavaScript.</p>
+        <p>Si les émojis ne s'affichent pas correctement, tu dois alors trouver leur code (<em>codepoints</em>):</p>
+        <img src="assets/step14.png" alt="Codepoint of emoji" class="mb-5">
+
+        <p>Il faut ensuite enlever la partie <code class="language-js">U+</code> et la remplacer dans ton JavaScript par <code class="language-js">&#x</code> :</p>
+        <p><code class="language-js">outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "&amp;#x1F4A9" + "&lt;/h1&gt;";</code></p>
+        <p>ou</p>
+        <p><code class="language-js">outputDiv.innerHTML = `&lt;h1&gt;${ratio} % &amp;#x1F4A9&lt;/h1&gt;`;</code></p>
+      </div> <!-- end alert -->
+    </div> <!-- end card-body -->
+  </div> <!-- end collapse Fourteen -->
+</div> <!-- end step 14 -->
 
 </div> <!-- end accordion -->
 </div> <!-- end container -->
