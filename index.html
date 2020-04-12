@@ -478,7 +478,7 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
       <p class="mt-3">Et si on voulait que le ratio soit dans une balise <code class="language-js">h1</code>? Dans ce cas, la fonction <code class="language-js">innerText</code> n'est pas la plus appropriée. On a besoin d'une fonction qui permet d'insérer de l'HTML: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"><code class="language-js">innerHTML</code></a></p>
 
       <p>On peut utiliser la fonction <code class="language-js">innerHTML</code> comme ceci:</p>
-      <p><code class="language-js">outputDiv.innerHTML = "<!-- <h1> -->" + ratio + " %" + "<!-- </h1> -->";</code></p>
+      <p><code class="language-js">outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "&lt;/h1&gt;";</code></p>
 
 
 
@@ -489,10 +489,10 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
       </p>
       <div class="collapse" id="collapseHint3">
         <div class="card card-body">
-          <p><code class="language-js">outputDiv.innerHTML = "<!-- <h1> -->" + ratio + " %<!-- </h1> -->";</code></p>
+          <p><code class="language-js">outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %&lt;/h1&lt;";</code></p>
           <div class="alert alert-warning" role="alert">
             <p><i class="far fa-lightbulb"></i>  On pourrait même aller plus loin en utilisant les <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">"littéraux de gabarits"</a> (<em>template literal</em> en anglais). En gros, il s'agit d'injecter du code Javascript dans une string grâce à cette syntaxe: <code class="language-js">${expression}</code></p>
-            <p><code class="language-js">outputDiv.innerHTML = `<!-- <h1> -->${ratio} %<!-- </h1> -->`;</code></p>
+            <p><code class="language-js">outputDiv.innerHTML = `&lt;h1&gt;${ratio} %&lt;/h1&gt;`;</code></p>
             <p>Note qu'on utilise alors l'accent grave <strong>``</strong> (<em>backtick</em>) et non les guillements <strong>""</strong>.</p>
           </div>
         </div>
