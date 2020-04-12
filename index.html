@@ -99,365 +99,365 @@
       <p>Comment créer un événement en Javascript? Avec la fonction <code class="language-js">addEventListener(EVENT, CALLBACK);</code> qui prend deux arguments, EVENT et CALLBACK.</p>
       <p>Cette fonction s'appelle sur un élément HTML qu'il faut d'abord obtenir (<code class="language-js">get</code>) et sauvegarder dans une variable:</p>
       <pre class="language-js line-numbers"><code>const form = document.getElementById('form');
-form.addEventListener(EVENT, CALLBACK);</code></pre>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header" id="headingFive">
-    <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-        Étape 5 - L'événement de la fonction addEventListener
-      </button>
-    </h2>
-  </div>
-  <div id="collapseFive" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div class="card-body">
-      <p>Quel est l'événement déclencheur?</p>
-      <p>Tu trouveras une <a href="https://developer.mozilla.org/en-US/docs/Web/Events">liste ici avec tous les événements.</a> Lequel choisir? "scroll", "click", "mouseover"?</p>
-
-      <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint1" role="button" aria-expanded="false" aria-controls="collapseHint1">Indice</a>
-      </p>
-      <div class="collapse mb-3" id="collapseHint1">
-        <div class="card card-body">
-        <p>Regarde dans la section <strong>Form events</strong>, c'est à dire tous les événements reliés aux formulaires.</p>
-        </div>
-      </div>
-
-      <p>
-        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer1" role="button" aria-expanded="false" aria-controls="collapseAnswer1">Réponse</a>
-      </p>
-      <div class="collapse" id="collapseAnswer1">
-        <div class="card card-body">
-        <p>Il s'agit de l'événement <code class="language-js">'submit'</code></p>
-        </div>
+        form.addEventListener(EVENT, CALLBACK);</code></pre>
       </div>
     </div>
   </div>
-</div>
 
-<div class="card">
-  <div class="card-header" id="headingSix">
-    <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-        Étape 6 - Callback
-      </button>
-    </h2>
-  </div>
-  <div id="collapseSix" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div class="card-body">
-      <p>Le <em>callback</em> d'une fonction c'est généralement... une autre fonction! C'est le code qui va être exécuté lorsque l'événement est déclenché.</p>
-      <pre class="language-js line-numbers"><code>function calculateRatio() {
-  console.log("je suis dans la fonction!!!");
-}
-
-const form = document.getElementById('form');
-form.addEventListener('submit', calculateRatio);</code></pre>
-      <p>Si tu ouvres ta console dans ton navigateur et appuies sur le bouton "Calculons", il ne se passe... rien! On ne voit pas les mots "je suis dans la fonction".</p>
-      <p>C'est un peu bizarre, mais pour régler ce problème, il faut rajouter une ligne dans notre fonction <code class="language-js">calculateRatio()</code>:</p>
-      <pre class="language-js line-numbers"><code>function calculateRatio() {
-  console.log("je suis dans la fonction!!!");
-  event.preventDefault();
-}
-
-const form = document.getElementById('form');
-form.addEventListener('submit', calculateRatio);</code></pre>
-
-<img src="assets/step6.png" alt="" class="mt-5">
+  <div class="card">
+    <div class="card-header" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Étape 5 - L'événement de la fonction addEventListener
+        </button>
+      </h2>
     </div>
-  </div>
-</div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Quel est l'événement déclencheur?</p>
+        <p>Tu trouveras une <a href="https://developer.mozilla.org/en-US/docs/Web/Events">liste ici avec tous les événements.</a> Lequel choisir? "scroll", "click", "mouseover"?</p>
 
-<div class="card">
-  <div class="card-header" id="headingSeven">
-    <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-        Étape 7 - Accède au formulaire HTML dans le JS
-      </button>
-    </h2>
-  </div>
-  <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div class="card-body">
-      <p>Maintenant que notre fonction <code class="language-js">calculateRatio()</code> fonctionne (haha), au lieu de faire un console log sur la string <code class="language-js">"je suis dans la fonction"</code>, on va faire un <code class="language-js">console.log()</code> sur notre formulaire HTML.</p>
-      <p>Pourquoi?</p>
-      <p>Parce que dans notre formulaire se cachent les valeurs qu'on cherche pour calculer notre ratio!</p>
-      <p>Dans quelle variable de notre code JS avons-nous stocké l'élément HTML form? Comment pouvons-nous l'inspecter?</p>
-            <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint2" role="button" aria-expanded="false" aria-controls="collapseHint2">Indice</a>
-      </p>
-      <div class="collapse mb-3" id="collapseHint2">
-        <div class="card card-body">
-        <p>Regarde la variable <code class="language-js">form</code>...</p>
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint1" role="button" aria-expanded="false" aria-controls="collapseHint1">Indice</a>
+        </p>
+        <div class="collapse mb-3" id="collapseHint1">
+          <div class="card card-body">
+            <p>Regarde dans la section <strong>Form events</strong>, c'est à dire tous les événements reliés aux formulaires.</p>
+          </div>
+        </div>
+
+        <p>
+          <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer1" role="button" aria-expanded="false" aria-controls="collapseAnswer1">Réponse</a>
+        </p>
+        <div class="collapse" id="collapseAnswer1">
+          <div class="card card-body">
+            <p>Il s'agit de l'événement <code class="language-js">'submit'</code></p>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <p>
-        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer2" role="button" aria-expanded="false" aria-controls="collapseAnswer2">Réponse</a>
-      </p>
-      <div class="collapse mb-3" id="collapseAnswer2">
-        <div class="card card-body">
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Étape 6 - Callback
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Le <em>callback</em> d'une fonction c'est généralement... une autre fonction! C'est le code qui va être exécuté lorsque l'événement est déclenché.</p>
         <pre class="language-js line-numbers"><code>function calculateRatio() {
-  console.log(form);
-  event.preventDefault();
-}
+          console.log("je suis dans la fonction!!!");
+        }
 
-const form = document.getElementById('form');
-form.addEventListener('submit', calculateRatio);</code></pre>
+        const form = document.getElementById('form');
+        form.addEventListener('submit', calculateRatio);</code></pre>
+        <p>Si tu ouvres ta console dans ton navigateur et appuies sur le bouton "Calculons", il ne se passe... rien! On ne voit pas les mots "je suis dans la fonction".</p>
+        <p>C'est un peu bizarre, mais pour régler ce problème, il faut rajouter une ligne dans notre fonction <code class="language-js">calculateRatio()</code>:</p>
+        <pre class="language-js line-numbers"><code>function calculateRatio() {
+          console.log("je suis dans la fonction!!!");
+          event.preventDefault();
+        }
+
+        const form = document.getElementById('form');
+        form.addEventListener('submit', calculateRatio);</code></pre>
+
+        <img src="assets/step6.png" alt="" class="mt-5">
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingSeven">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Étape 7 - Accède au formulaire HTML dans le JS
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Maintenant que notre fonction <code class="language-js">calculateRatio()</code> fonctionne (haha), au lieu de faire un console log sur la string <code class="language-js">"je suis dans la fonction"</code>, on va faire un <code class="language-js">console.log()</code> sur notre formulaire HTML.</p>
+        <p>Pourquoi?</p>
+        <p>Parce que dans notre formulaire se cachent les valeurs qu'on cherche pour calculer notre ratio!</p>
+        <p>Dans quelle variable de notre code JS avons-nous stocké l'élément HTML form? Comment pouvons-nous l'inspecter?</p>
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint2" role="button" aria-expanded="false" aria-controls="collapseHint2">Indice</a>
+        </p>
+        <div class="collapse mb-3" id="collapseHint2">
+          <div class="card card-body">
+            <p>Regarde la variable <code class="language-js">form</code>...</p>
+          </div>
+        </div>
+
+        <p>
+          <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer2" role="button" aria-expanded="false" aria-controls="collapseAnswer2">Réponse</a>
+        </p>
+        <div class="collapse mb-3" id="collapseAnswer2">
+          <div class="card card-body">
+            <pre class="language-js line-numbers"><code>function calculateRatio() {
+              console.log(form);
+              event.preventDefault();
+            }
+
+            const form = document.getElementById('form');
+            form.addEventListener('submit', calculateRatio);</code></pre>
+          </div>
+        </div>
+
+        <p>Ceci nous donne accès à l'élément <code class="language-js">form</code> dans la console. Si tu cliques sur le triangle à côté de <code class="language-js">form</code> tu vas pouvoir voir les "sous-éléments" <code class="language-js">input</code>:</p>
+        <img src="assets/step7.gif" alt="">
+
+
+
+      </div>
+    </div>
+  </div> <!-- end step 7 -->
+
+  <div class="card">
+    <div class="card-header" id="headingEight">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+          Étape 8 - Récupère le nombre de <i class="fas fa-toilet-paper"></i> dans le formulaire
+        </button>
+      </h2>
+    </div>
+    <div id="collapseEight" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Comme on a vu à l'étape précédente, quand on clique sur l'élément <code class="language-js">form</code> dans la console, on a accès à ses sous-éléments, dont les éléments input. Chaque <code class="language-js">input</code> a un index, un peu comme dans un tableau (<em>array</em> en anglais). On accède à un élément d'un tableau en utilisant les accolades <code class="language-js">[]</code>: <code class="language-js">form[0]</code>.</p>
+        <div class="alert alert-warning" role="alert">
+          <i class="fas fa-exclamation-triangle"></i>  En JavaScript (et beaucoup d'autres langages), les index commencent à 0 et non pas 1.
+        </div>
+        <p>Dans la console de ton navigateur, essaie de trouver comment accéder à la valeur (<em>value</em>, hint, hint) du premier <code class="language-js">input</code>.</p>
+
+        <p>
+          <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3" role="button" aria-expanded="false" aria-controls="collapseAnswer3">Réponse</a>
+        </p>
+        <div class="collapse mb-3" id="collapseAnswer3">
+          <div class="card card-body">
+            <p><code class="language-js">form[0].value</code></p>
+            <img src="assets/step8.gif" alt="">
+          </div>
+        </div>
+
+        <p>Tu peux maintenant utiliser ce code dans ta fonction <code class="language-js">calculateRatio()</code> et sauvegarder le nombre de rouleaux dans une belle variable! Vérifie que ta variable stocke la bonne donnée avec un petit... <code class="language-js">console.log()</code>!</p>
+
+        <p><pre class="language-js line-numbers"><code>function calculateRatio() {
+          const rolls = XXXXX ;
+          console.log(rolls);
+          event.preventDefault();
+        }
+
+        const form = document.getElementById('form');
+        form.addEventListener('submit', calculateRatio);</code></pre></p>
+        <img src="assets/step8.png" alt="" class="mt-5">
+      </div>
+    </div>
+  </div> <!-- end step 8 -->
+
+  <div class="card">
+    <div class="card-header" id="headingNine">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+          Étape 9 - Récupère le nombre de jours dans le formulaire
+        </button>
+      </h2>
+    </div>
+    <div id="collapseNine" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Trouve l'index de l'élément <code class="language-js">input</code> pour le nombre de jours de confinement dans l'élément <code class="language-js">form</code>.</p>
+
+        <p>Comme pour les rouleaux, sauvegarde le nombre de jours de confinement  dans une variable  <code class="language-js">const lockdownDays = XXXX;</code></p>
+        <div class="alert alert-warning" role="alert">
+          <i class="far fa-lightbulb"></i>  Note la syntaxe de notre variable <code class="language-js">lockdownDays</code>. En <strong>JavaScript</strong>, quand une variable est faite de plusieurs mots, le premier mot est en minuscules, tandis que la première lettre des mots suivants est en majuscule. Cette syntaxe s'appelle <code class="language-js">lowerCamelCase</code>... car elle rappelle les bosses d'un chameau.   <img src="assets/camel.png" alt="Camel" height="70rem"></p>
+          <p>D'autres syntaxes existent. En <strong>Ruby</strong>, par exemple, on utilise la syntaxe <code class="language-js">snake_case</code>. <img src="assets/snake.webp" alt="Snake" height="50rem"> Notre variable s'écrirait alors <code class="language-js">lockdown_days</code>.
+          </div>
+          <p>Vérifie que ta variable stocke la bonne donnée avec... <code class="language-js">console.log()</code>!</p>
+
+          <p><pre class="language-js line-numbers"><code>function calculateRatio() {
+            const rolls = XXXXX ;
+            console.log(rolls);
+
+            const lockdownDays = XXXXX ;
+            console.log(lockdownDays);
+
+            event.preventDefault();
+          }
+
+          const form = document.getElementById('form');
+          form.addEventListener('submit', calculateRatio);</code></pre></p>
+          <img src="assets/step9.png" alt="" class="mt-5">
         </div>
       </div>
+    </div> <!-- end step 9 -->
 
-      <p>Ceci nous donne accès à l'élément <code class="language-js">form</code> dans la console. Si tu cliques sur le triangle à côté de <code class="language-js">form</code> tu vas pouvoir voir les "sous-éléments" <code class="language-js">input</code>:</p>
-      <img src="assets/step7.gif" alt="">
-
-
-
-    </div>
-  </div>
-</div> <!-- end step 7 -->
-
-<div class="card">
-  <div class="card-header" id="headingEight">
-    <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-        Étape 8 - Récupère le nombre de <i class="fas fa-toilet-paper"></i> dans le formulaire
-      </button>
-    </h2>
-  </div>
-  <div id="collapseEight" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div class="card-body">
-      <p>Comme on a vu à l'étape précédente, quand on clique sur l'élément <code class="language-js">form</code> dans la console, on a accès à ses sous-éléments, dont les éléments input. Chaque <code class="language-js">input</code> a un index, un peu comme dans un tableau (<em>array</em> en anglais). On accède à un élément d'un tableau en utilisant les accolades <code class="language-js">[]</code>: <code class="language-js">form[0]</code>.</p>
-      <div class="alert alert-warning" role="alert">
-        <i class="fas fa-exclamation-triangle"></i>  En JavaScript (et beaucoup d'autres langages), les index commencent à 0 et non pas 1.
+    <div class="card">
+      <div class="card-header" id="headingTen">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+            Étape 10 - Calcule le ratio
+          </button>
+        </h2>
       </div>
-      <p>Dans la console de ton navigateur, essaie de trouver comment accéder à la valeur (<em>value</em>, hint, hint) du premier <code class="language-js">input</code>.</p>
+      <div id="collapseTen" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>Toujours dans la fonction <code class="language-js">calculateRatio()</code>, on peut maintenant calculer le fameux ratio.</p>
+          <p>Imaginons qu'un <i class="fas fa-toilet-paper"></i> dure 5 jours. Pour calculer le nombre total de jours pour lesquels on aura du papier, il faut faire: <code class="language-js">rolls * 5</code></p>
 
-      <p>
-        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3" role="button" aria-expanded="false" aria-controls="collapseAnswer3">Réponse</a>
-      </p>
-      <div class="collapse mb-3" id="collapseAnswer3">
-        <div class="card card-body">
-          <p><code class="language-js">form[0].value</code></p>
-          <img src="assets/step8.gif" alt="">
+          <div class="alert alert-warning" role="alert">
+            <i class="far fa-star"></i>   En JavaScript (et beaucoup d'autres langages), on utilise l'astérisque (<strong>*</strong>) pour représenter la <strong>multiplication</strong>.
+          </div>
+
+
+          <p>Encore une fois, utilisons une variable pour stocker ce nombre total de jours: <code class="language-js">const paperDays = rolls * 5;</code></p>
+
+          <p>Vérifie que ta variable <code class="language-js">paperDays</code> stocke la bonne donnée avec... Ok, ok, tu sais déjà quoi faire!</p>
+
+          <div class="alert alert-warning" role="alert">
+            <i class="far fa-lightbulb"></i>  Une fois que tu as vérifié ce que stocke une variable, tu peux te débarasser du <code class="language-js">console.log()</code> ou le mettre ne commentaire.
+          </div>
+
+          <p>Il ne reste plus qu'à calculer le ratio. Imaginons que j'ai 3 <i class="fas fa-toilet-paper"></i> chez moi. Vu que chaque <i class="fas fa-toilet-paper"></i> dure 5 jours, il me reste du papier pour 15 jours. Si le confinement dure 15 jours, c'est parfait j'ai tout juste assez de papier. Mon ratio est de <strong>100%</strong>.</p>
+          <p>Mais imagine que le confinement dure <strong>30 jours</strong>. Là, je n'ai du papier de toilette que pour la moitié de mon confinement. Mon ratio est de <strong>50%</strong>.</p>
+
+          <p>Quelle est la formule du ratio?</p>
+
+          <p>
+            <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer4" role="button" aria-expanded="false" aria-controls="collapseAnswer4">Réponse</a>
+          </p>
+          <div class="collapse" id="collapseAnswer4">
+            <div class="card card-body">
+              <p>La formule du ratio est la suivante: <code class="language-js">paperDays / lockdownDays * 100</code></p>
+            </div>
+          </div>
+          <p>Tu peux maintenant stocker ton ratio dans une variable et... oui, oui, <code class="language-js">console.log(ratio);</code> for the win!</p>
+
+
+          <p><pre class="language-js line-numbers"><code>function calculateRatio() {
+            const rolls = XXXXX ;
+            const days = XXXXX ;
+
+            const paperDays = rolls * 5;
+            // console.log(paperDays);
+
+            const ratio = XXXXX ;
+            console.log(ratio);
+
+            event.preventDefault();
+          }
+
+          const form = document.getElementById('form');
+          form.addEventListener('submit', calculateRatio);</code></pre></p>
+          <img src="assets/step10.png" alt="" class="mt-5">
+          <img src="assets/step10b.png" alt="" class="mt-5">
         </div>
       </div>
+    </div> <!-- end step 10 -->
 
-      <p>Tu peux maintenant utiliser ce code dans ta fonction <code class="language-js">calculateRatio()</code> et sauvegarder le nombre de rouleaux dans une belle variable! Vérifie que ta variable stocke la bonne donnée avec un petit... <code class="language-js">console.log()</code>!</p>
-
-      <p><pre class="language-js line-numbers"><code>function calculateRatio() {
-  const rolls = XXXXX ;
-  console.log(rolls);
-  event.preventDefault();
-}
-
-const form = document.getElementById('form');
-form.addEventListener('submit', calculateRatio);</code></pre></p>
-      <img src="assets/step8.png" alt="" class="mt-5">
-    </div>
-  </div>
-</div> <!-- end step 8 -->
-
-<div class="card">
-  <div class="card-header" id="headingNine">
-    <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-        Étape 9 - Récupère le nombre de jours dans le formulaire
-      </button>
-    </h2>
-  </div>
-  <div id="collapseNine" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div class="card-body">
-      <p>Trouve l'index de l'élément <code class="language-js">input</code> pour le nombre de jours de confinement dans l'élément <code class="language-js">form</code>.</p>
-
-      <p>Comme pour les rouleaux, sauvegarde le nombre de jours de confinement  dans une variable  <code class="language-js">const lockdownDays = XXXX;</code></p>
-      <div class="alert alert-warning" role="alert">
-        <i class="far fa-lightbulb"></i>  Note la syntaxe de notre variable <code class="language-js">lockdownDays</code>. En <strong>JavaScript</strong>, quand une variable est faite de plusieurs mots, le premier mot est en minuscules, tandis que la première lettre des mots suivants est en majuscule. Cette syntaxe s'appelle <code class="language-js">lowerCamelCase</code>... car elle rappelle les bosses d'un chameau.   <img src="assets/camel.png" alt="Camel" height="70rem"></p>
-        <p>D'autres syntaxes existent. En <strong>Ruby</strong>, par exemple, on utilise la syntaxe <code class="language-js">snake_case</code>. <img src="assets/snake.webp" alt="Snake" height="50rem"> Notre variable s'écrirait alors <code class="language-js">lockdown_days</code>.
+    <div class="card">
+      <div class="card-header" id="headingEleven">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+            Étape 11 - Arrondis le ratio
+          </button>
+        </h2>
       </div>
-      <p>Vérifie que ta variable stocke la bonne donnée avec... <code class="language-js">console.log()</code>!</p>
+      <div id="collapseEleven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>Que se passe-t-il s'il te reste 3 <i class="fas fa-toilet-paper"></i> et que tu es confiné <strong>27</strong> jours? Quel sera ton ratio?</p>
+          <img src="assets/step11.png" alt="" class="mb-5">
+          <p>Pas génial, tous ces chiffres après la virgule! On a besoin d'arrondir notre ratio. Pour ceci, JavaScript a une fonction qui s'appelle... <code class="language-js">round()</code>.</p>
+          <p class="mb-3">En regardant <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">documentation pour la fonction <code class="language-js">round()</code></a>, arrives-tu à arrondir ton ratio?
 
-      <p><pre class="language-js line-numbers"><code>function calculateRatio() {
-  const rolls = XXXXX ;
-  console.log(rolls);
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer5" role="button" aria-expanded="false" aria-controls="collapseAnswer5">Réponse</a>
+            </p>
+            <div class="collapse" id="collapseAnswer5">
+              <div class="card card-body">
+                <p>Voici comment arrondir le ratio: <code class="language-js">Math.round(paperDays / lockdownDays * 100)</code></p>
+              </div>
+            </div>
 
-  const lockdownDays = XXXXX ;
-  console.log(lockdownDays);
-
-  event.preventDefault();
-}
-
-const form = document.getElementById('form');
-form.addEventListener('submit', calculateRatio);</code></pre></p>
-      <img src="assets/step9.png" alt="" class="mt-5">
-    </div>
-  </div>
-</div> <!-- end step 9 -->
-
-<div class="card">
-  <div class="card-header" id="headingTen">
-    <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-        Étape 10 - Calcule le ratio
-      </button>
-    </h2>
-  </div>
-  <div id="collapseTen" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div class="card-body">
-      <p>Toujours dans la fonction <code class="language-js">calculateRatio()</code>, on peut maintenant calculer le fameux ratio.</p>
-      <p>Imaginons qu'un <i class="fas fa-toilet-paper"></i> dure 5 jours. Pour calculer le nombre total de jours pour lesquels on aura du papier, il faut faire: <code class="language-js">rolls * 5</code></p>
-
-      <div class="alert alert-warning" role="alert">
-        <i class="far fa-star"></i>   En JavaScript (et beaucoup d'autres langages), on utilise l'astérisque (<strong>*</strong>) pour représenter la <strong>multiplication</strong>.
-      </div>
-
-
-      <p>Encore une fois, utilisons une variable pour stocker ce nombre total de jours: <code class="language-js">const paperDays = rolls * 5;</code></p>
-
-      <p>Vérifie que ta variable <code class="language-js">paperDays</code> stocke la bonne donnée avec... Ok, ok, tu sais déjà quoi faire!</p>
-
-      <div class="alert alert-warning" role="alert">
-        <i class="far fa-lightbulb"></i>  Une fois que tu as vérifié ce que stocke une variable, tu peux te débarasser du <code class="language-js">console.log()</code> ou le mettre ne commentaire.
-      </div>
-
-      <p>Il ne reste plus qu'à calculer le ratio. Imaginons que j'ai 3 <i class="fas fa-toilet-paper"></i> chez moi. Vu que chaque <i class="fas fa-toilet-paper"></i> dure 5 jours, il me reste du papier pour 15 jours. Si le confinement dure 15 jours, c'est parfait j'ai tout juste assez de papier. Mon ratio est de <strong>100%</strong>.</p>
-      <p>Mais imagine que le confinement dure <strong>30 jours</strong>. Là, je n'ai du papier de toilette que pour la moitié de mon confinement. Mon ratio est de <strong>50%</strong>.</p>
-
-      <p>Quelle est la formule du ratio?</p>
-
-      <p>
-        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer4" role="button" aria-expanded="false" aria-controls="collapseAnswer4">Réponse</a>
-      </p>
-      <div class="collapse" id="collapseAnswer4">
-        <div class="card card-body">
-        <p>La formule du ratio est la suivante: <code class="language-js">paperDays / lockdownDays * 100</code></p>
+            <img src="assets/step11b.png" alt="">
+          </div>
         </div>
-      </div>
-      <p>Tu peux maintenant stocker ton ratio dans une variable et... oui, oui, <code class="language-js">console.log(ratio);</code> for the win!</p>
+      </div> <!-- end step 11 -->
 
-
-      <p><pre class="language-js line-numbers"><code>function calculateRatio() {
-  const rolls = XXXXX ;
-  const days = XXXXX ;
-
-  const paperDays = rolls * 5;
-  // console.log(paperDays);
-
-  const ratio = XXXXX ;
-  console.log(ratio);
-
-  event.preventDefault();
-}
-
-const form = document.getElementById('form');
-form.addEventListener('submit', calculateRatio);</code></pre></p>
-      <img src="assets/step10.png" alt="" class="mt-5">
-      <img src="assets/step10b.png" alt="" class="mt-5">
-    </div>
-  </div>
-</div> <!-- end step 10 -->
-
-<div class="card">
-  <div class="card-header" id="headingEleven">
-    <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-        Étape 11 - Arrondis le ratio
-      </button>
-    </h2>
-  </div>
-  <div id="collapseEleven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div class="card-body">
-      <p>Que se passe-t-il s'il te reste 3 <i class="fas fa-toilet-paper"></i> et que tu es confiné <strong>27</strong> jours? Quel sera ton ratio?</p>
-      <img src="assets/step11.png" alt="" class="mb-5">
-      <p>Pas génial, tous ces chiffres après la virgule! On a besoin d'arrondir notre ratio. Pour ceci, JavaScript a une fonction qui s'appelle... <code class="language-js">round()</code>.</p>
-      <p class="mb-3">En regardant <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">documentation pour la fonction <code class="language-js">round()</code></a>, arrives-tu à arrondir ton ratio?
-
-      <p>
-        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer5" role="button" aria-expanded="false" aria-controls="collapseAnswer5">Réponse</a>
-      </p>
-      <div class="collapse" id="collapseAnswer5">
-        <div class="card card-body">
-        <p>Voici comment arrondir le ratio: <code class="language-js">Math.round(paperDays / lockdownDays * 100)</code></p>
+      <div class="card">
+        <div class="card-header" id="headingTwelve">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+              Étape 12 - Affiche le ratio
+            </button>
+          </h2>
         </div>
-      </div>
+        <div id="collapseTwelve" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Il est temps d'afficher notre ratio sur notre page web (plutôt que dans la console).</p>
 
-      <img src="assets/step11b.png" alt="">
-    </div>
-  </div>
-</div> <!-- end step 11 -->
-
-<div class="card">
-  <div class="card-header" id="headingTwelve">
-    <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-        Étape 12 - Affiche le ratio
-      </button>
-    </h2>
-  </div>
-  <div id="collapseTwelve" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-    <div class="card-body">
-      <p>Il est temps d'afficher notre ratio sur notre page web (plutôt que dans la console).</p>
-
-      <p>Pour cela, il va falloir l'injecter dans notre HTML. Dans ton fichier <strong>HTML</strong> tu peux ajouter un élément <code class="language-js">div</code>. Donne-lui un <code class="language-js">id</code> pour que tu puisse facilement retrouver ta <code class="language-js">div</code> dans ton JavaScript.</p>
+            <p>Pour cela, il va falloir l'injecter dans notre HTML. Dans ton fichier <strong>HTML</strong> tu peux ajouter un élément <code class="language-js">div</code>. Donne-lui un <code class="language-js">id</code> pour que tu puisse facilement retrouver ta <code class="language-js">div</code> dans ton JavaScript.</p>
       <pre class="language-html line-numbers"><code><!--
   <input type="submit" value="Calculons!">
 </form>
 <div id="output"></div>--></code></pre>
 
-      <p class="mt-3">Retourne maintenant dans ton <strong>JavaScript</strong>. On veut que le <strong>contenu</strong> de la <code class="language-js">div</code> soit notre <code class="language-js">ratio</code>. En d'autres termes, on veut que notre HTML ressemble à ceci: <pre class="language-html"><code><!-- <div id="output">56</div> --></code></pre>
+<p class="mt-3">Retourne maintenant dans ton <strong>JavaScript</strong>. On veut que le <strong>contenu</strong> de la <code class="language-js">div</code> soit notre <code class="language-js">ratio</code>. En d'autres termes, on veut que notre HTML ressemble à ceci: <pre class="language-html"><code><!-- <div id="output">56</div> --></code></pre>
 
-      <div class="alert alert-warning" role="alert">
-        <p><i class="far fa-lightbulb"></i>  Petit rappel de vocabulaire:</p>
-        <img src="assets/anatomie-element-html.png" alt="HTML anatomy" class="mx-auto">
-      </div>
+  <div class="alert alert-warning" role="alert">
+    <p><i class="far fa-lightbulb"></i>  Petit rappel de vocabulaire:</p>
+    <img src="assets/anatomie-element-html.png" alt="HTML anatomy" class="mx-auto">
+  </div>
 
-      <p>Pour spécifier le contenu d'un élément HTML, il y a une chouette fonction JavaScript qui s'appelle <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank"><code class="language-js">innerText</code></a>. Si tu cliques sur lien de <code class="language-js">innerText</code>, tu verras un exemple de comment utiliser cette fonction. Il y a deux étapes:</p>
-      <ol>
-        <li>Sélectionner l'élément HTML</li>
-        <li>Insèrer le contenu</li>
-      </ol>
+  <p>Pour spécifier le contenu d'un élément HTML, il y a une chouette fonction JavaScript qui s'appelle <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText" target="_blank"><code class="language-js">innerText</code></a>. Si tu cliques sur lien de <code class="language-js">innerText</code>, tu verras un exemple de comment utiliser cette fonction. Il y a deux étapes:</p>
+  <ol>
+    <li>Sélectionner l'élément HTML</li>
+    <li>Insèrer le contenu</li>
+  </ol>
 
-      <p>En JavaScript, il y a plusieurs fonctions pour séléctionner un ou plusieurs éléments HTML. Sais-tu lesquelles?</p>
+  <p>En JavaScript, il y a plusieurs fonctions pour séléctionner un ou plusieurs éléments HTML. Sais-tu lesquelles?</p>
 
-      <p>
-        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer6" role="button" aria-expanded="false" aria-controls="collapseAnswer6">Réponse</a>
-      </p>
-      <div class="collapse" id="collapseAnswer6">
-        <div class="card card-body">
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"><code class="language-js">.getElementById()</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector"><code class="language-js">.querySelector()</code></a>, ou encore <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll"><code class="language-js">.querySelectorAll()</code></a></p>
-        </div>
-      </div>
-
-      <p>Comme notre <code class="language-js">div</code> a déjà un <code class="language-js">id</code>, on va utiliser la fonction <code class="language-js">.getElementById()</code>. Celle-ci s'utilise ainsi:</p>
-      <p><code class="language-js">document.getElementById("XXXX")</code></p>
-      <p>Remplace les XXXX par le nom de ton <code class="language-js">id</code>, <em>en gardant la même syntaxe que dans ton HTML</em>. Dans mon cas, ce sera <code class="language-js">document.getElementById("output")</code></p>
-
-      <div class="alert alert-warning" role="alert">
-        <p><i class="far fa-lightbulb"></i>  Si tu écris <code class="language-js">document.getElementById(output)</code>, tu vas voir le message d'erreur suivant dans ta console:</p>
-        <img src="assets/step12.png" alt="output not defined" class="mb-3">
-        <p>La différence pour nous, mortels, est minime entre <code class="language-js">output</code> et <code class="language-js">"output"</code>, mais pour JavaScript, ça fait toute la différence du monde!</p>
-        <p>Pour JavaScript, <code class="language-js">output</code> fait référence soit à une <em>fonction</em>, soit à une <em>variable</em> qui s'appelerait "output". Le problème, c'est qu'on n'a pas défini de variable ou de fonction "output". D'où le fait que JavaScript soit tout mélangé et nous affiche un beau message d'erreur en <span style="color: red;">rouge</span>.</p>
-        <p>Par contre, pour JavaScript, <code class="language-js">"output"</code>, c'est tout simplement une <em>string</em> et là, il n'y a pas de problème!</p>
-      </div>
-
-      <p>Il ne reste plus qu'à stocker notre élément HTML dans une variable et utiliser la fonction <code class="language-js">.innerText</code>:</p>
-      <p><pre class="language-js line-numbers"><code>function calculateRatio() {
-  // BLABLA PLEIN DE BEAU CODE
-
-  const outputDiv = document.getElementById("output");
-  outputDiv.innerText = XXXX;
-
-  event.preventDefault();
-}
-
-const form = document.getElementById('form');
-form.addEventListener('submit', calculateRatio);</code></pre></p>
-
-      <p>Et ça y est, notre ratio s'affiche!!!</p>
-
-      <img src="assets/step12.gif" alt="Ratio s'affiche">
+  <p>
+    <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer6" role="button" aria-expanded="false" aria-controls="collapseAnswer6">Réponse</a>
+  </p>
+  <div class="collapse" id="collapseAnswer6">
+    <div class="card card-body">
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"><code class="language-js">.getElementById()</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector"><code class="language-js">.querySelector()</code></a>, ou encore <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll"><code class="language-js">.querySelectorAll()</code></a></p>
     </div>
   </div>
+
+  <p>Comme notre <code class="language-js">div</code> a déjà un <code class="language-js">id</code>, on va utiliser la fonction <code class="language-js">.getElementById()</code>. Celle-ci s'utilise ainsi:</p>
+  <p><code class="language-js">document.getElementById("XXXX")</code></p>
+  <p>Remplace les XXXX par le nom de ton <code class="language-js">id</code>, <em>en gardant la même syntaxe que dans ton HTML</em>. Dans mon cas, ce sera <code class="language-js">document.getElementById("output")</code></p>
+
+  <div class="alert alert-warning" role="alert">
+    <p><i class="far fa-lightbulb"></i>  Si tu écris <code class="language-js">document.getElementById(output)</code>, tu vas voir le message d'erreur suivant dans ta console:</p>
+    <img src="assets/step12.png" alt="output not defined" class="mb-3">
+    <p>La différence pour nous, mortels, est minime entre <code class="language-js">output</code> et <code class="language-js">"output"</code>, mais pour JavaScript, ça fait toute la différence du monde!</p>
+    <p>Pour JavaScript, <code class="language-js">output</code> fait référence soit à une <em>fonction</em>, soit à une <em>variable</em> qui s'appelerait "output". Le problème, c'est qu'on n'a pas défini de variable ou de fonction "output". D'où le fait que JavaScript soit tout mélangé et nous affiche un beau message d'erreur en <span style="color: red;">rouge</span>.</p>
+    <p>Par contre, pour JavaScript, <code class="language-js">"output"</code>, c'est tout simplement une <em>string</em> et là, il n'y a pas de problème!</p>
+  </div>
+
+  <p>Il ne reste plus qu'à stocker notre élément HTML dans une variable et utiliser la fonction <code class="language-js">.innerText</code>:</p>
+  <p><pre class="language-js line-numbers"><code>function calculateRatio() {
+    // BLABLA PLEIN DE BEAU CODE
+
+    const outputDiv = document.getElementById("output");
+    outputDiv.innerText = XXXX;
+
+    event.preventDefault();
+  }
+
+  const form = document.getElementById('form');
+  form.addEventListener('submit', calculateRatio);</code></pre></p>
+
+  <p>Et ça y est, notre ratio s'affiche!!!</p>
+
+  <img src="assets/step12.gif" alt="Ratio s'affiche">
+</div>
+</div>
 </div> <!-- end step 12 -->
 
 <div class="card">
@@ -514,48 +514,87 @@ form.addEventListener('submit', calculateRatio);</code></pre></p>
       <p>Et qui dit <em>si</em>, dit <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">condition</strong></a>! Petit rappel sur la syntaxe d'une condition:</p>
 
       <p><pre class="language-js line-numbers"><code>if (condition) {
-  // SOME CODE
-} else {
-  // MORE CODE
-}</code></pre></p>
+        // SOME CODE
+      } else {
+      // MORE CODE
+    }</code></pre></p>
 
-      <p>Notre code aurait donc l'air de quelque chose comme ceci:</p>
+    <p>Notre code aurait donc l'air de quelque chose comme ceci:</p>
+    <p><pre class="language-js line-numbers"><code>if (ratio XXXX 100) {
+      outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "😄" + "&lt;/h1&gt;";
+    } else {
+    XXXX
+  }</code></pre></p>
+
+  <p>La version refactorisée de ce code?</p>
+
+  <p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint4" role="button" aria-expanded="false" aria-controls="collapseHint4">Indice</a>
+  </p>
+  <div class="collapse" id="collapseHint4">
+    <div class="card card-body">
       <p><pre class="language-js line-numbers"><code>if (ratio XXXX 100) {
-  outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "😄" + "&lt;/h1&gt;";
-} else {
-  XXXX
-}</code></pre></p>
+        outputDiv.innerHTML = `&lt;h1&gt;${ratio} % 😄&lt;/h1&gt;`;
+      } else {
+      XXXX
+    }</code></pre></p>
 
-      <p>La version refactorisée de ce code?</p>
+  </div>
+</div> <!-- end hint -->
+<div class="alert alert-warning mt-5" role="alert">
+  <p><i class="far fa-grimace"></i>  Normalement, tu peux trouver les émojis de ton choix sur un site comme <a href="https://emojipedia.org">Emojipedia</a> et simplement les copier-coller dans ton code JavaScript.</p>
+  <p>Si les émojis ne s'affichent pas correctement, tu dois alors trouver leur code (<em>codepoints</em>):</p>
+  <img src="assets/step14.png" alt="Codepoint of emoji" class="mb-5">
 
-      <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint4" role="button" aria-expanded="false" aria-controls="collapseHint4">Indice</a>
-      </p>
-      <div class="collapse" id="collapseHint4">
-        <div class="card card-body">
-          <p><pre class="language-js line-numbers"><code>if (ratio XXXX 100) {
-  outputDiv.innerHTML = `&lt;h1&gt;${ratio} % 😄&lt;/h1&gt;`;
-} else {
-  XXXX
-}</code></pre></p>
+  <p>Il faut ensuite enlever la partie <code class="language-js">U+</code> et la remplacer dans ton JavaScript par <code class="language-js">&#x</code> :</p>
+  <p><code class="language-js">outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "&amp;#x1F4A9" + "&lt;/h1&gt;";</code></p>
+  <p>ou</p>
+  <p><code class="language-js">outputDiv.innerHTML = `&lt;h1&gt;${ratio} % &amp;#x1F4A9&lt;/h1&gt;`;</code></p>
+</div> <!-- end alert -->
 
-        </div>
-      </div> <!-- end hint -->
-      <div class="alert alert-warning mt-5" role="alert">
-        <p><i class="far fa-grimace"></i>  Normalement, tu peux trouver les émojis de ton choix sur un site comme <a href="https://emojipedia.org">Emojipedia</a> et simplement les copier-coller dans ton code JavaScript.</p>
-        <p>Si les émojis ne s'affichent pas correctement, tu dois alors trouver leur code (<em>codepoints</em>):</p>
-        <img src="assets/step14.png" alt="Codepoint of emoji" class="mb-5">
-
-        <p>Il faut ensuite enlever la partie <code class="language-js">U+</code> et la remplacer dans ton JavaScript par <code class="language-js">&#x</code> :</p>
-        <p><code class="language-js">outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "&amp;#x1F4A9" + "&lt;/h1&gt;";</code></p>
-        <p>ou</p>
-        <p><code class="language-js">outputDiv.innerHTML = `&lt;h1&gt;${ratio} % &amp;#x1F4A9&lt;/h1&gt;`;</code></p>
-      </div> <!-- end alert -->
-
-      <img src="assets/step14b.png" alt="ratio with emoji" class="mx-auto d-block mb-5">
-    </div> <!-- end card-body -->
-  </div> <!-- end collapse Fourteen -->
+<img src="assets/step14b.png" alt="ratio with emoji" class="mx-auto d-block mb-5">
+</div> <!-- end card-body -->
+</div> <!-- end collapse Fourteen -->
 </div> <!-- end step 14 -->
+
+<div class="card">
+  <div class="card-header" id="headingFifteen">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+        Étape 15 - Les curseurs
+      </button>
+    </h2>
+  </div>
+  <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Maintenant que la base fonctionne, on peut s'amuser avec le style. Au lieu d'un formulaire quelconque, pourquoi ne pas utiliser un curseur sur une ligne (<em>slider</em> en anglais)? Comme ceci:</p>
+
+      <div>
+        <input type="range" min="0" max="11">
+      </div>
+
+      <p>On aura toujours besoin de l'élément HTML <code class="language-js">input</code> mais cette fois-ci le type ne sera pas <code class="language-js">text</code> mais <code class="language-js">range</code>. <em>Range</em> veut dire écart.</p>
+
+      <p>Tu peux donc remplacer ton code HTML existant comme ceci:</p>
+
+      <p><pre><code class="language-html line-numbers"><!--<p>Rouleaux restants:</p>
+<input type="range" id="nb-rolls" min="0" max="20">--></code></pre></p>
+
+      <p>À ton avis que veulent dire les propriétés <code class="language-js">min</code> et <code class="language-js">max</code>?</p>
+
+      <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer7" role="button" aria-expanded="false" aria-controls="collapseAnswer7">Indice</a>
+    </p>
+    <div class="collapse" id="collapseAnswer7">
+      <div class="card card-body">
+        <p>Elles veulent dire que le nombre de rouleau minimum est de zéro et le nombre maximum de 20. Tu sais quoi faire si tu veux permettre à tes visiteurs de calculer leur ratio avec un nombre de rouleaux plus élevé.</p>
+      </div>
+    </div> <!-- end hint -->
+    <p>Finalement, tu peux te débarasser de l'<code class="language-js">input</code> de type <code class="language-js">submit</code>. En effet, on n'a plus besoin du bouton "Calculons".</p>
+
+      <img src="assets/step15.png" alt="sliders" class="mx-auto d-block mb-5">
+    </div> <!-- end card-body -->
+  </div> <!-- end collapse Fifteen -->
+</div> <!-- end step 15 -->
 
 </div> <!-- end accordion -->
 </div> <!-- end container -->
