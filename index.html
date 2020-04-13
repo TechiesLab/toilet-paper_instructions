@@ -582,7 +582,7 @@
 
       <p>À ton avis que veulent dire les propriétés <code class="language-js">min</code> et <code class="language-js">max</code>?</p>
 
-      <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer7" role="button" aria-expanded="false" aria-controls="collapseAnswer7">Indice</a>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapseAnswer7" role="button" aria-expanded="false" aria-controls="collapseAnswer7">Indice</a>
     </p>
     <div class="collapse" id="collapseAnswer7">
       <div class="card card-body">
@@ -595,6 +595,61 @@
     </div> <!-- end card-body -->
   </div> <!-- end collapse Fifteen -->
 </div> <!-- end step 15 -->
+
+<div class="card">
+  <div class="card-header" id="headingSixteen">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+        Étape 16 - Change ton événement
+      </button>
+    </h2>
+  </div>
+  <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Non seulement notre beau ratio a disparu, mais en plus, nos visiteurs ne peuvent même pas savoir combien de rouleaux ou de jours ils sont sélectionné avec les curseurs 😭. C'est la faute du JavaScript! Regarde les dernières lignes de ton JS:</p>
+      <pre><code class="language-js line-numbers">const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre>
+      <p>Notre fonction <code class="language-js">.addEventListener()</code> attendait (écoutait) un événement de type <code class="language-js">'submit'</code>. Manque de pot, on vient d'enlever notre bouton "Calculons" (qui lui était un <code class="language-js">input</code> de type <code class="language-js">submit</code>). Qu'à cela ne tienne:on a de beaux curseurs, on va s'en servir!</p>
+
+      <p>On va maintenant écouter... nos curseurs! Et plus particulièrement, quand nos curseurs changent de position. Le temps est venu de retourner à notre documentation sur les <a href="https://developer.mozilla.org/en-US/docs/Web/Events">événements</a>.</p>
+
+      <p>S'il ne s'agit pas de <code class="language-js">'submit'</code>, duquel s'agit-il?</p>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer8" role="button" aria-expanded="false" aria-controls="collapseAnswer8">Réponse</a>
+      </p>
+      <div class="collapse" id="collapseAnswer8">
+        <div class="card card-body">
+          <p>Il s'agit de l'événement <code class="language-js">'input'</code></p>
+        </div>
+      </div>
+
+      <p>Dans notre code JS, mettons en commentaire l'event listener sur notre variable <code class="language-js">form</code>:</p>
+      <pre><code class="language-js line-numbers">const form = document.getElementById('form');
+// form.addEventListener('submit', calculateRatio);</code></pre>
+
+      <p>Créons une variable <code class="language-js">rollsInput</code> pour stocker l'élément HTML <code class="language-html">&lt;input type="range"&gt;</code>:</p>
+      <pre><code class="language-js line-numbers">const form = document.getElementById('form');
+// form.addEventListener('submit', calculateRatio);
+
+const rollsInput = document.getElementById('XXXX');</code></pre>
+
+
+
+      <p>Et finalement, ajoutons notre event listener:</p>
+
+      <pre><code class="language-js line-numbers">const form = document.getElementById('form');
+// form.addEventListener('submit', calculateRatio);
+
+const rollsInput = document.getElementById('XXXX');
+rollsInput.addEventListener('XXXX', calculateRatio);</code></pre>
+
+      <p>Tu peux faire la même chose pour l'<code class="language-js">input</code> des jours. Résultat des courses, le ratio s'affiche à nouveau:</p>
+
+      <img src="assets/step16.gif" alt="sliders" class="mx-auto d-block mb-5">
+    </div> <!-- end card-body -->
+  </div> <!-- end collapse Fifteen -->
+</div> <!-- end step 16 -->
 
 </div> <!-- end accordion -->
 </div> <!-- end container -->
