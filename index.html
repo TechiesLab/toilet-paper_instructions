@@ -606,7 +606,7 @@
   </div>
   <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordionExample">
     <div class="card-body">
-      <p>Non seulement notre beau ratio a disparu, mais en plus, nos visiteurs ne peuvent même pas savoir combien de rouleaux ou de jours ils sont sélectionné avec les curseurs 😭. C'est la faute du JavaScript! Regarde les dernières lignes de ton JS:</p>
+      <p>Notre beau ratio a disparu 😭. C'est la faute du JavaScript! Regarde les dernières lignes de ton JS:</p>
       <pre><code class="language-js line-numbers">const form = document.getElementById('form');
 form.addEventListener('submit', calculateRatio);</code></pre>
       <p>Notre fonction <code class="language-js">.addEventListener()</code> attendait (écoutait) un événement de type <code class="language-js">'submit'</code>. Manque de pot, on vient d'enlever notre bouton "Calculons" (qui lui était un <code class="language-js">input</code> de type <code class="language-js">submit</code>). Qu'à cela ne tienne:on a de beaux curseurs, on va s'en servir!</p>
@@ -648,8 +648,52 @@ rollsInput.addEventListener('XXXX', calculateRatio);</code></pre>
 
       <img src="assets/step16.gif" alt="sliders" class="mx-auto d-block mb-5">
     </div> <!-- end card-body -->
-  </div> <!-- end collapse Fifteen -->
+  </div> <!-- end collapse Sixteen -->
 </div> <!-- end step 16 -->
+
+<div class="card">
+  <div class="card-header" id="headingSeventeen">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+        Étape 17 - Affiche le nombre de <i class="fas fa-toilet-paper"></i> et de jours
+      </button>
+    </h2>
+  </div>
+  <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Ce qui serait chouette, c'est que nos visiteurs puissent savoir exactement combien de rouleaux et de jours ils ont sélectionné avec les curseurs et que ces nombres se mettent à jour dès qu'on bouge le curseur:</p>
+
+      <img src="assets/step17.gif" alt="sliders" class="mx-auto d-block mb-5">
+
+      <p>La première chose à faire, c'est ajouter un élément HTML dans lequel on pourra injecter le nombre, grâce au JavaScript. Le plus facile, c'est d'utiliser un élément <code class="language-html">&lt;span&gt;</code> dans notre élément <code class="language-html">&lt;p&gt;</code>:</p>
+
+      <pre><code class="language-html">&lt;p&gt;Rouleaux restants: &lt;span id="rolls-output"&gt;&lt;/span&gt;&lt;/p&gt;</code></pre>
+
+      <p>À ton avis, pourquoi a-t-on ajouté l'attribut <code class="language-html">id="rolls-output"</code> à notre élément <code class="language-html">&lt;span&gt;</code>?</p>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer9" role="button" aria-expanded="false" aria-controls="collapseAnswer9">Réponse</a>
+      </p>
+      <div class="collapse" id="collapseAnswer9">
+        <div class="card card-body">
+          <p>Pour pouvoir sélectionner plus facilement l'élément dans notre JavaScript grâce à la fonction <code class="language-js">.getElementById()</code></p>
+        </div>
+      </div>
+
+      <p>À l'intérieur de notre fonction <code class="language-js">calculateRatio</code>, on peut à présent aller sélectionner l'élément <code class="language-html">&lt;span id="rolls-output"&gt;</code> et y injecter le nombre de rouleux. D'ailleurs... dans quelle variable est stockée le nombre de rouleaux?</p>
+
+      <pre><code class="language-js line-numbers">function calculateRatio() {
+  const rolls = form[0].value;
+  const lockdownDays = form[1].value;
+
+  const rollsOutput = document.getElementById('XXXX');
+  rollsOutput.innerHTML = XXXX;</code></pre>
+
+      <p>Fais la même chose pour le nombre de jours et le tour est joué!</p>
+
+    </div> <!-- end card-body -->
+  </div> <!-- end collapse Seventeen -->
+</div> <!-- end step 17 -->
 
 </div> <!-- end accordion -->
 </div> <!-- end container -->
