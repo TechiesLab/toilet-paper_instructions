@@ -4,14 +4,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Toilet Paper Challenge!</title>
   <link rel="stylesheet" href="stylesheets/prism.css" data-noprefix />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
- <div class="container">
-  <h1 class="text-center m-5">Toilet Paper Rush Challenge!</h1>
 
-  <p>Le but de ce défi est de créer une page web inspirée de <a href="https://howmuchtoiletpaper.com/">ce site</a>.</p>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(assets/toilet.jpg);">
+    <div id="class-languages">
+      <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
+      <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
+      <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
+    </div>
+    <div class="container" id="challenge">
+      <div class="main">
+        <img src="images/logo.png" alt="">
+        <div class="class-title">
+          <h1>Jamais sans mon papier!</h1>
+          <h4>défi JavaScript pur</h4>
+        </div>
+      </div>
+      <p>Le but de ce défi est de créer une page web inspirée de <a href="https://howmuchtoiletpaper.com/">ce site</a>.</p>
+    </div>
+  </div>
+
+ <div class="container" id="challenge">
+
   <p>Voici la <a href="https://margotte.github.io/toilet-paper/">version du Techies Lab</a>:</p>
   <img src="assets/intro.png" alt="Screenshot of Techies Lab page" class="rounded mx-auto d-block mb-5">
 
@@ -21,7 +39,7 @@
     <div class="card">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Étape 1 - Dossier et fichiers</button>
+          <button class="btn btn-link done" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Étape 1 - Dossier et fichiers</button>
         </h2>
       </div>
 
@@ -720,10 +738,25 @@ rollsInput.addEventListener('XXXX', calculateRatio);</code></pre>
 </div> <!-- end accordion -->
 </div> <!-- end container -->
 
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
+    <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+      <i class="far fa-copyright"></i>
+      2020 Techies Lab ASBL. All rights reserved.
+    </a>
+  </div>
+</div>
 
-<script src="javascript/prism.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="javascript/prism.js"></script>
+<script type="text/javascript" src="javascript/app.js"></script>
 </body>
 </html>
