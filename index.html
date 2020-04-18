@@ -2,7 +2,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Toilet Paper Challenge!</title>
+
+  <title>TL Toilet Paper</title>
+
+  <link rel="shortcut icon" type="image/png" href="assets/ico_full.png"/>
   <link rel="stylesheet" href="stylesheets/prism.css" data-noprefix />
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
@@ -16,34 +19,44 @@
       <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
       <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
     </div>
-    <div class="container" id="challenge">
+    <div class="container">
       <div class="main">
-        <img src="images/logo.png" alt="">
+        <img src="assets/logo.png" alt="">
         <div class="class-title">
-          <h1>Jamais sans mon papier!</h1>
+          <h1>Ciel mon papier!</h1>
           <h4>défi JavaScript pur</h4>
         </div>
       </div>
-      <p>Le but de ce défi est de créer une page web inspirée de <a href="https://howmuchtoiletpaper.com/">ce site</a>.</p>
+      <p>Le but de ce défi est de créer une page web inspirée de <a href="https://howmuchtoiletpaper.com/" target="_blank">ce site</a>.</p>
+      <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
     </div>
-  </div>
+  </div> <!-- end .banner -->
 
- <div class="container" id="challenge">
+  <div class="container" id="challenge">
 
-  <p>Voici la <a href="https://margotte.github.io/toilet-paper/">version du Techies Lab</a>:</p>
-  <img src="assets/intro.png" alt="Screenshot of Techies Lab page" class="rounded mx-auto d-block mb-5">
+    <div class="gamification">
+      <div class="progress">
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+      </div>
+    </div> <!-- end .gamification -->
+
+  <p>Voici la <a href="https://margotte.github.io/toilet-paper/" target="_blank">version du Techies Lab</a>:</p>
+  <img src="assets/intro.gif" alt="Screenshot of Techies Lab page" class="rounded mx-auto d-block mb-5">
 
   <p>En passant, le site LottieFiles offre des <a href="https://lottiefiles.com/coronavirus-animations">animations gratuites pour illustrer le coronavirus</a>.</p>
 
-  <div class="accordion mb-5" id="accordionExample">
+  <div class="accordion mb-5" id="accordionSteps">
     <div class="card">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
-          <button class="btn btn-link done" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Étape 1 - Dossier et fichiers</button>
+          <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Étape 1 - Dossier et fichiers</button>
         </h2>
-      </div>
+      </div><!--  end .card-header -->
 
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSteps">
         <div class="card-body">
           <p>Crée un nouveau dossier pour ton projet avec les trois fichiers habituels:</p>
           <ul>
@@ -52,19 +65,19 @@
             <li>app.js</li>
           </ul>
           <p>Ouvre ton dossier dans ton éditeur de texte (Sublime Text, par exemple).</p>
-        </div>
-      </div>
-    </div>
+        </div> <!-- end .card-body -->
+      </div> <!-- end .collapse -->
+    </div> <!-- end .card 1 -->
 
     <div class="card">
       <div class="card-header" id="headingTwo">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             Étape 2 - HTML de base
           </button>
         </h2>
       </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSteps">
         <div class="card-body">
           <p>Crée l'HTML de base de ta page web. On va commencer avec un formulaire qui contient deux entrées: les rouleaux restants et le nombre de jours de confinement.</p>
           <p>Le résultat final devrait avoir l'air de ceci:</p>
@@ -87,12 +100,12 @@
 <div class="card">
   <div class="card-header" id="headingThree">
     <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         Étape 3 - Relie l'HTML et le JS
       </button>
     </h2>
   </div>
-  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSteps">
     <div class="card-body">
       <pre class="language-html line-numbers"><code><!-- ...
     <input type="submit" value="Calculons!">
@@ -106,12 +119,12 @@
 <div class="card">
   <div class="card-header" id="headingFour">
     <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
         Étape 4 - Code le JavaScript!
       </button>
     </h2>
   </div>
-  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
     <div class="card-body">
       <p>Lorsque les utilisateurs appuient sur le bouton "Calculons", cela doit déclencher un <em>événement</em>: le calcul du ratio.</p>
       <p>Comment créer un événement en Javascript? Avec la fonction <code class="language-js">addEventListener(EVENT, CALLBACK);</code> qui prend deux arguments, EVENT et CALLBACK.</p>
@@ -125,12 +138,12 @@
   <div class="card">
     <div class="card-header" id="headingFive">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
           Étape 5 - L'événement de la fonction addEventListener
         </button>
       </h2>
     </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
       <div class="card-body">
         <p>Quel est l'événement déclencheur?</p>
         <p>Tu trouveras une <a href="https://developer.mozilla.org/en-US/docs/Web/Events">liste ici avec tous les événements.</a> Lequel choisir? "scroll", "click", "mouseover"?</p>
@@ -159,12 +172,12 @@
   <div class="card">
     <div class="card-header" id="headingSix">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
           Étape 6 - Callback
         </button>
       </h2>
     </div>
-    <div id="collapseSix" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div id="collapseSix" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
       <div class="card-body">
         <p>Le <em>callback</em> d'une fonction c'est généralement... une autre fonction! C'est le code qui va être exécuté lorsque l'événement est déclenché.</p>
         <pre class="language-js line-numbers"><code>function calculateRatio() {
@@ -191,12 +204,12 @@
   <div class="card">
     <div class="card-header" id="headingSeven">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+        <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
           Étape 7 - Accède au formulaire HTML dans le JS
         </button>
       </h2>
     </div>
-    <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
       <div class="card-body">
         <p>Maintenant que notre fonction <code class="language-js">calculateRatio()</code> fonctionne (haha), au lieu de faire un console log sur la string <code class="language-js">"je suis dans la fonction"</code>, on va faire un <code class="language-js">console.log()</code> sur notre formulaire HTML.</p>
         <p>Pourquoi?</p>
@@ -238,12 +251,12 @@
   <div class="card">
     <div class="card-header" id="headingEight">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+        <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
           Étape 8 - Récupère le nombre de <i class="fas fa-toilet-paper"></i> dans le formulaire
         </button>
       </h2>
     </div>
-    <div id="collapseEight" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div id="collapseEight" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
       <div class="card-body">
         <p>Comme on a vu à l'étape précédente, quand on clique sur l'élément <code class="language-js">form</code> dans la console, on a accès à ses sous-éléments, dont les éléments input. Chaque <code class="language-js">input</code> a un index, un peu comme dans un tableau (<em>array</em> en anglais). On accède à un élément d'un tableau en utilisant les accolades <code class="language-js">[]</code>: <code class="language-js">form[0]</code>.</p>
         <div class="alert alert-warning" role="alert">
@@ -279,12 +292,12 @@
   <div class="card">
     <div class="card-header" id="headingNine">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+        <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
           Étape 9 - Récupère le nombre de jours dans le formulaire
         </button>
       </h2>
     </div>
-    <div id="collapseNine" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div id="collapseNine" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
       <div class="card-body">
         <p>Trouve l'index de l'élément <code class="language-js">input</code> pour le nombre de jours de confinement dans l'élément <code class="language-js">form</code>.</p>
 
@@ -315,12 +328,12 @@
     <div class="card">
       <div class="card-header" id="headingTen">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+          <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
             Étape 10 - Calcule le ratio
           </button>
         </h2>
       </div>
-      <div id="collapseTen" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div id="collapseTen" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
         <div class="card-body">
           <p>Toujours dans la fonction <code class="language-js">calculateRatio()</code>, on peut maintenant calculer le fameux ratio.</p>
           <p>Imaginons qu'un <i class="fas fa-toilet-paper"></i> dure 5 jours. Pour calculer le nombre total de jours pour lesquels on aura du papier, il faut faire: <code class="language-js">rolls * 5</code></p>
@@ -378,12 +391,12 @@
     <div class="card">
       <div class="card-header" id="headingEleven">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+          <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
             Étape 11 - Arrondis le ratio
           </button>
         </h2>
       </div>
-      <div id="collapseEleven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div id="collapseEleven" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
         <div class="card-body">
           <p>Que se passe-t-il s'il te reste 3 <i class="fas fa-toilet-paper"></i> et que tu es confiné <strong>27</strong> jours? Quel sera ton ratio?</p>
           <img src="assets/step11.png" alt="" class="mb-5">
@@ -407,12 +420,12 @@
       <div class="card">
         <div class="card-header" id="headingTwelve">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
               Étape 12 - Affiche le ratio
             </button>
           </h2>
         </div>
-        <div id="collapseTwelve" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div id="collapseTwelve" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSteps">
           <div class="card-body">
             <p>Il est temps d'afficher notre ratio sur notre page web (plutôt que dans la console).</p>
 
@@ -481,12 +494,12 @@
 <div class="card">
   <div class="card-header" id="headingThirteen">
     <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
         Étape 13 - Affiche un <strong>beau</strong> ratio
       </button>
     </h2>
   </div><!-- end card-header -->
-  <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionExample">
+  <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionSteps">
     <div class="card-body">
       <p>Notre ratio fait un peu pitié. Il est perdu en-dessous du formulaire, on ne sait pas qu'il représente un pourcentage...</p>
 
@@ -520,12 +533,12 @@
 <div class="card">
   <div class="card-header" id="headingFourteen">
     <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
         Étape 14 - Les émojis <i class="far fa-smile"></i> <i class="fas fa-poo"></i>
       </button>
     </h2>
   </div>
-  <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordionExample">
+  <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordionSteps">
     <div class="card-body">
       <p>À côté de notre ratio, on va ajouter un bel émoji! Celui-ci va dépendre du ratio. Si on est au-dessus de 100%, on est 😄, sinon c'est la... 💩</p>
 
@@ -578,12 +591,12 @@
 <div class="card">
   <div class="card-header" id="headingFifteen">
     <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
         Étape 15 - Les curseurs
       </button>
     </h2>
   </div>
-  <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordionExample">
+  <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordionSteps">
     <div class="card-body">
       <p>Maintenant que la base fonctionne, on peut s'amuser avec le style. Au lieu d'un formulaire quelconque, pourquoi ne pas utiliser un curseur sur une ligne (<em>slider</em> en anglais)? Comme ceci:</p>
 
@@ -617,12 +630,12 @@
 <div class="card">
   <div class="card-header" id="headingSixteen">
     <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
         Étape 16 - Change ton événement
       </button>
     </h2>
   </div>
-  <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordionExample">
+  <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordionSteps">
     <div class="card-body">
       <p>Notre beau ratio a disparu 😭. C'est la faute du JavaScript! Regarde les dernières lignes de ton JS:</p>
       <pre><code class="language-js line-numbers">const form = document.getElementById('form');
@@ -672,12 +685,12 @@ rollsInput.addEventListener('XXXX', calculateRatio);</code></pre>
 <div class="card">
   <div class="card-header" id="headingSeventeen">
     <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
         Étape 17 - Affiche le nombre de <i class="fas fa-toilet-paper"></i> et de jours
       </button>
     </h2>
   </div>
-  <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordionExample">
+  <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordionSteps">
     <div class="card-body">
       <p>Ce qui serait chouette, c'est que nos visiteurs puissent savoir exactement combien de rouleaux et de jours ils ont sélectionné avec les curseurs et que ces nombres se mettent à jour dès qu'on bouge le curseur:</p>
 
@@ -716,12 +729,12 @@ rollsInput.addEventListener('XXXX', calculateRatio);</code></pre>
 <div class="card">
   <div class="card-header" id="headingEighteen">
     <h2 class="mb-0">
-      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
         Étape 18 - Make it pretty!!! <i class="fas fa-paint-brush"></i>
       </button>
     </h2>
   </div>
-  <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordionExample">
+  <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordionSteps">
     <div class="card-body">
       <p>C'est le temps de rendre tout ça BEAU!!! Voici quelques idées:</p>
 
