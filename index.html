@@ -130,7 +130,7 @@
       <p>Comment créer un événement en Javascript? Avec la fonction <code class="language-js">addEventListener(EVENT, CALLBACK);</code> qui prend deux arguments, EVENT et CALLBACK.</p>
       <p>Cette fonction s'appelle sur un élément HTML qu'il faut d'abord obtenir (<code class="language-js">get</code>) et sauvegarder dans une variable:</p>
       <pre class="language-js line-numbers"><code>const form = document.getElementById('form');
-        form.addEventListener(EVENT, CALLBACK);</code></pre>
+form.addEventListener(EVENT, CALLBACK);</code></pre>
       </div>
     </div>
   </div>
@@ -181,20 +181,20 @@
       <div class="card-body">
         <p>Le <em>callback</em> d'une fonction c'est généralement... une autre fonction! C'est le code qui va être exécuté lorsque l'événement est déclenché.</p>
         <pre class="language-js line-numbers"><code>function calculateRatio() {
-          console.log("je suis dans la fonction!!!");
-        }
+  console.log("je suis dans la fonction!!!");
+}
 
-        const form = document.getElementById('form');
-        form.addEventListener('submit', calculateRatio);</code></pre>
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre>
         <p>Si tu ouvres ta console dans ton navigateur et appuies sur le bouton "Calculons", il ne se passe... rien! On ne voit pas les mots "je suis dans la fonction".</p>
         <p>C'est un peu bizarre, mais pour régler ce problème, il faut rajouter une ligne dans notre fonction <code class="language-js">calculateRatio()</code>:</p>
         <pre class="language-js line-numbers"><code>function calculateRatio() {
-          console.log("je suis dans la fonction!!!");
-          event.preventDefault();
-        }
+  console.log("je suis dans la fonction!!!");
+  event.preventDefault();
+}
 
-        const form = document.getElementById('form');
-        form.addEventListener('submit', calculateRatio);</code></pre>
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre>
 
         <img src="assets/step6.png" alt="" class="mt-5">
       </div>
@@ -230,20 +230,17 @@
         <div class="collapse mb-3" id="collapseAnswer2">
           <div class="card card-body">
             <pre class="language-js line-numbers"><code>function calculateRatio() {
-              console.log(form);
-              event.preventDefault();
-            }
+  console.log(form);
+  event.preventDefault();
+}
 
-            const form = document.getElementById('form');
-            form.addEventListener('submit', calculateRatio);</code></pre>
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre>
           </div>
         </div>
 
         <p>Ceci nous donne accès à l'élément <code class="language-js">form</code> dans la console. Si tu cliques sur le triangle à côté de <code class="language-js">form</code> tu vas pouvoir voir les "sous-éléments" <code class="language-js">input</code>:</p>
         <img src="assets/step7.gif" alt="">
-
-
-
       </div>
     </div>
   </div> <!-- end step 7 -->
@@ -277,13 +274,13 @@
         <p>Tu peux maintenant utiliser ce code dans ta fonction <code class="language-js">calculateRatio()</code> et sauvegarder le nombre de rouleaux dans une belle variable! Vérifie que ta variable stocke la bonne donnée avec un petit... <code class="language-js">console.log()</code>!</p>
 
         <p><pre class="language-js line-numbers"><code>function calculateRatio() {
-          const rolls = XXXXX ;
-          console.log(rolls);
-          event.preventDefault();
-        }
+  const rolls = XXXXX ;
+  console.log(rolls);
+  event.preventDefault();
+}
 
-        const form = document.getElementById('form');
-        form.addEventListener('submit', calculateRatio);</code></pre></p>
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre></p>
         <img src="assets/step8.png" alt="" class="mt-5">
       </div>
     </div>
@@ -309,17 +306,17 @@
           <p>Vérifie que ta variable stocke la bonne donnée avec... <code class="language-js">console.log()</code>!</p>
 
           <p><pre class="language-js line-numbers"><code>function calculateRatio() {
-            const rolls = XXXXX ;
-            console.log(rolls);
+  const rolls = XXXXX ;
+  console.log(rolls);
 
-            const lockdownDays = XXXXX ;
-            console.log(lockdownDays);
+  const lockdownDays = XXXXX ;
+  console.log(lockdownDays);
 
-            event.preventDefault();
-          }
+  event.preventDefault();
+}
 
-          const form = document.getElementById('form');
-          form.addEventListener('submit', calculateRatio);</code></pre></p>
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre></p>
           <img src="assets/step9.png" alt="" class="mt-5">
         </div>
       </div>
@@ -368,20 +365,20 @@
 
 
           <p><pre class="language-js line-numbers"><code>function calculateRatio() {
-            const rolls = XXXXX ;
-            const days = XXXXX ;
+  const rolls = XXXXX ;
+  const days = XXXXX ;
 
-            const paperDays = rolls * 5;
-            // console.log(paperDays);
+  const paperDays = rolls * 5;
+  // console.log(paperDays);
 
-            const ratio = XXXXX ;
-            console.log(ratio);
+  const ratio = XXXXX ;
+  console.log(ratio);
 
-            event.preventDefault();
-          }
+  event.preventDefault();
+}
 
-          const form = document.getElementById('form');
-          form.addEventListener('submit', calculateRatio);</code></pre></p>
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre></p>
           <img src="assets/step10.png" alt="" class="mt-5">
           <img src="assets/step10b.png" alt="" class="mt-5">
         </div>
@@ -473,16 +470,16 @@
 
   <p>Il ne reste plus qu'à stocker notre élément HTML dans une variable et utiliser la fonction <code class="language-js">.innerText</code>:</p>
   <p><pre class="language-js line-numbers"><code>function calculateRatio() {
-    // BLABLA PLEIN DE BEAU CODE
+  // BLABLA PLEIN DE BEAU CODE
 
-    const outputDiv = document.getElementById("output");
-    outputDiv.innerText = XXXX;
+  const outputDiv = document.getElementById("output");
+  outputDiv.innerText = XXXX;
 
-    event.preventDefault();
-  }
+  event.preventDefault();
+}
 
-  const form = document.getElementById('form');
-  form.addEventListener('submit', calculateRatio);</code></pre></p>
+const form = document.getElementById('form');
+form.addEventListener('submit', calculateRatio);</code></pre></p>
 
   <p>Et ça y est, notre ratio s'affiche!!!</p>
 
@@ -545,17 +542,17 @@
       <p>Et qui dit <em>si</em>, dit <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">condition</strong></a>! Petit rappel sur la syntaxe d'une condition:</p>
 
       <p><pre class="language-js line-numbers"><code>if (condition) {
-        // SOME CODE
-      } else {
-      // MORE CODE
-    }</code></pre></p>
+  // SOME CODE
+} else {
+  // MORE CODE
+}</code></pre></p>
 
     <p>Notre code aurait donc l'air de quelque chose comme ceci:</p>
     <p><pre class="language-js line-numbers"><code>if (ratio XXXX 100) {
-      outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "😄" + "&lt;/h1&gt;";
-    } else {
-    XXXX
-  }</code></pre></p>
+  outputDiv.innerHTML = "&lt;h1&gt;" + ratio + " %" + "😄" + "&lt;/h1&gt;";
+} else {
+  XXXX
+}</code></pre></p>
 
   <p>La version refactorisée de ce code?</p>
 
@@ -565,10 +562,10 @@
   <div class="collapse" id="collapseHint4">
     <div class="card card-body">
       <p><pre class="language-js line-numbers"><code>if (ratio XXXX 100) {
-        outputDiv.innerHTML = `&lt;h1&gt;${ratio} % 😄&lt;/h1&gt;`;
-      } else {
-      XXXX
-    }</code></pre></p>
+  outputDiv.innerHTML = `&lt;h1&gt;${ratio} % 😄&lt;/h1&gt;`;
+} else {
+  XXXX
+}</code></pre></p>
 
   </div>
 </div> <!-- end hint -->
